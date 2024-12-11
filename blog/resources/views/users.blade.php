@@ -11,11 +11,11 @@
 </head>
 
 <body>
-    <div class="flex justify-center items-center h-screen">
-        <div class="mx-auto flex-row ">
-            <h1 class="text-3xl">Users</h1>
+    <div class="flex justify-center items-center h-screen bg-white">
+        <div class="mx-auto flex-row  p-2 bg-white shadow-xl rounded font-medium">
+            <h1 class="text-3xl m-3">Users</h1>
             <div class="relative overflow-x-auto">
-                <table class="w-full text-sm text-left text-gray-500 ">
+                <table class="w-full text-sm text-left">
                     <thead class="text-xs text-gray-700 bg-gray-50 ">
                         <tr>
                             <th scope="col" class="px-6 py-3">
@@ -33,7 +33,8 @@
                         @foreach ($users as $user)
                             <tr class="bg-white border-b ">
                                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                                    {{ $user->name }}
+                                    <div>{{ $user->name }}</div>
+                                    <div class="text-xs text-gray-500">{{ $user->email }}</div>
                                 </th>
                                 <td class="px-6 py-4">
                                     {{ $user->profile->phone }}
