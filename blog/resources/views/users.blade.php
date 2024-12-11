@@ -14,34 +14,39 @@
     <div class="flex justify-center items-center h-screen">
         <div class="mx-auto flex-row ">
             <h1 class="text-3xl">Users</h1>
-            <div class="mx-auto flex-row p-2">
-                <div class="flex">
-                    <div class="w-1/3">
-                        <p class="">lorem20</p>
-                    </div>
-                    <div class="w-1/3">
-                        <p class="mx-auto">phone</p>
-                    </div>
-                    <div class="w-1/3">
-                        <p class="mx-auto">address</p>
-                    </div>
-                </div>
-                @foreach ($users as $user)
-                    <div class="flex">
-                        <p class="1/3">
-                            {{ $user->name }}
-                        </p>
-                        <p class="1/3">
-                            {{ $user->profile->phone }}
-                        </p>
-                        <p class="1/3">
-                            {{ $user->profile->address }}
-                        </p>
-                    </div>
-                @endforeach
+            <div class="relative overflow-x-auto">
+                <table class="w-full text-sm text-left text-gray-500 ">
+                    <thead class="text-xs text-gray-700 bg-gray-50 ">
+                        <tr>
+                            <th scope="col" class="px-6 py-3">
+                                NAME
+                            </th>
+                            <th scope="col" class="px-6 py-3">
+                                PHONE
+                            </th>
+                            <th scope="col" class="px-6 py-3">
+                                ADDRESS
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach ($users as $user)
+                            <tr class="bg-white border-b ">
+                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                                    {{ $user->name }}
+                                </th>
+                                <td class="px-6 py-4">
+                                    {{ $user->profile->phone }}
+                                </td>
+                                <td class="px-6 py-4">
+                                    {{ $user->profile->address }}
+                                </td>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
 </body>
-
 </html>
