@@ -11,3 +11,13 @@ Route::get(
     '/users',
     [UserController::class, 'index']
 )->name('profiles.index');
+
+Route::get(
+    '/users/{id}',
+    [UserController::class, 'user']
+)->name('users.show');
+
+Route::get(
+    '/posts/{id}',
+    [UserController::class, 'post']
+)->name('posts.show');

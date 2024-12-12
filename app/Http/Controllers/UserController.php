@@ -12,4 +12,16 @@ class UserController extends Controller
         $users = User::all();
         return view('users', ['users' => $users]);
     }
+
+    public function user($id)
+    {
+        $user  = User::find($id);
+        return view('user', ['user' => $user]);
+    }
+
+    public function post($id)
+    {
+        $post  = User::find($id);
+        return view('post', ['post' => $post]);
+    }
 }
