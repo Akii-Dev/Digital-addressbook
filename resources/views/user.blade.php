@@ -12,28 +12,34 @@
 
 <body>
     <div class="flex justify-center  bg-white">
-        <div class="mx-auto flex-row w-96 p-2 bg-white shadow-xl rounded font-medium">
-            <h1 class="text-3xl m-3">User information</h1>
-            <div class="p-4 bg-red-500">
-                <div class="flex">
-                    <p>Name</p>
+        <div class="mx-auto flex-row w-1/2 p-2 bg-white shadow-xl rounded font-medium">
+            <div class="p-4 m-3  outline outline-1 rounded outline-slate-300 text-sm">
+            <h1 class="text-xl font-semibold p-4">User information</h1>
+            
+                <div class="flex bg-gray-100 p-4">
+                    <p class="w-48 text-gray-500 font-semibold">Name</p>
                     <p>{{ $user->name }}</p>
                 </div>
-                <div class="flex">
-                    <p>Email</p>
+                <div class="flex  p-4">
+                    <p class="w-48 text-gray-500 font-semibold">Email</p>
                     <p>{{ $user->email }}</p>
                 </div>
-                <div class="flex">
-                    <p>Phone</p>
+                <div class="flex p-4">
+                    <p class="w-48 text-gray-500 font-semibold">Phone</p>
                     <p>{{ $user->profile->phone }}</p>
                 </div>
-                <div class="flex">
-                    <p>Address</p>
+                <div class="flex bg-gray-100 p-4">
+                    <p class="w-48 text-gray-500 font-semibold">Address</p>
                     <p>{{ $user->profile->address }}</p>
                 </div>
-                <div class="flex">
-                    <p>Posts</p>
-                    
+                <div class="flex p-4">
+                    <p class="w-48 text-gray-500">Posts</p>
+                    <div>
+                        @foreach ($user->posts as $post)
+                        <p>{{$post->title}}</p>
+                    @endforeach
+
+                    </div>
                 </div>
             </div>
         </div>

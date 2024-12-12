@@ -18,15 +18,9 @@
                 <table class="w-full text-sm text-left">
                     <thead class="text-xs text-gray-700 bg-gray-50 ">
                         <tr>
-                            <th scope="col" class="px-6 py-3">
-                                NAME
-                            </th>
-                            <th scope="col" class="px-6 py-3">
-                                PHONE
-                            </th>
-                            <th scope="col" class="px-6 py-3">
-                                ADDRESS
-                            </th>
+                            <th scope="col" class="px-6 py-3">NAME</th>
+                            <th scope="col" class="px-6 py-3">PHONE</th>
+                            <th scope="col" class="px-6 py-3">ADDRESS</th>
                         </tr>
                     </thead>
                     <tbody>
