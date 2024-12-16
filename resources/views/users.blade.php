@@ -34,7 +34,10 @@
                                     {{ $user->profile->phone }}
                                 </td>
                                 <td class="px-6 py-4">
-                                    {{ $user->profile->address }}
+                                    <div class="flex justify-between">
+                                        {{ $user->profile->address }}
+                                        <a href='/users/{{$user->id}}'>View</a>
+                                    </div>
                                 </td>
                             </tr>
                         @endforeach

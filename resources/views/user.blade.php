@@ -39,7 +39,7 @@
                         <div class="flex p-1">
                         <img class="h-full w-6 p-auto mr-2" src="/images/file.svg" alt="">
                         <p class="">{{$post->title}}</p>
-                        <a class="text-right" href="">View</a>
+                        <a class="text-right" href='/posts/{{$post->id}}'>View</a>
                     </div>
                     @endforeach
 
