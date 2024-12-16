@@ -21,7 +21,9 @@
                     <p>{{$post->user->email}}</p>
                 </div>
             </div>
-            <p class="mt-8">{{$post->body}}</p>
+            <div class="mt-8">
+                {!! nl2br(e($post->body)) !!}
+            </div>
         </div>
     </div>
 </body>
