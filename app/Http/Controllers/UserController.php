@@ -19,11 +19,4 @@ class UserController extends Controller
         $user  = User::find($id);
         return view('user', ['user' => $user]);
     }
-
-    public function post($id)
-    {
-        // $user  = User::find($id);
-        $post  = Post::find($id);
-        return view('post', ['post' => $post]);
-    }
 }

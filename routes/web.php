@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
 // Route::get('/', function () {
@@ -19,5 +20,5 @@ Route::get(
 
 Route::get(
     '/posts/{id}',
-    [UserController::class, 'post']
+    [PostController::class, 'post']
 )->name('posts.show');
