@@ -37,10 +37,12 @@
                     <div class="rounded">
                         @foreach ($user->posts as $post)
                         <div class="flex p-1">
-                        <img class="h-full w-6 p-auto mr-2" src="/images/file.svg" alt="">
-                        <p class="">{{$post->title}}</p>
-                        <a class="text-right" href='/posts/{{$post->id}}'>View</a>
-                    </div>
+                            <img class="h-full w-6 p-auto mr-2" src="/images/file.svg" alt="">
+                            <div class="flex justify-between items-center w-full">
+                                <p class="flex-1">{{ $post->title }}</p>
+                                <a class="text-blue-600" href='/posts/{{ $post->id }}'>View</a>
+                            </div>
+                        </div>
                     @endforeach
 
                     </div>

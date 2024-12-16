@@ -36,7 +36,7 @@
                                 <td class="px-6 py-4">
                                     <div class="flex justify-between">
                                         {{ $user->profile->address }}
-                                        <a href='/users/{{$user->id}}'>View</a>
+                                        <a class="text-blue-600" href='/users/{{$user->id}}'>View</a>
                                     </div>
                                 </td>
                             </tr>
