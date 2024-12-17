@@ -13,9 +13,10 @@
 <body>
     <div class="flex justify-center  bg-white">
         <div class="mx-auto flex-row w-1/2 p-2 bg-white shadow-xl rounded font-medium">
-            <div class="p-4 m-3  outline outline-1 rounded outline-slate-300 text-sm shadow-md">
             <h1 class="text-xl font-semibold p-4 ">User information</h1>
-            
+            <div class="p-4 m-3  outline outline-1 rounded outline-slate-300 text-sm shadow-md">
+
+
                 <div class="flex bg-gray-100 p-4">
                     <p class="w-56 text-gray-500 font-semibold">Name</p>
                     <p>{{ $user->name }}</p>
@@ -36,18 +37,25 @@
                     <p class="w-56 text-gray-500">Posts</p>
                     <div class="rounded">
                         @foreach ($user->posts as $post)
-                        <div class="flex p-1">
-                            <img class="h-full w-6 p-auto mr-2" src="/images/file.svg" alt="">
-                            <div class="flex justify-between items-center w-full">
-                                <p class="flex-1">{{ $post->title }}</p>
-                                <a class="text-blue-600" href='/posts/{{ $post->id }}'>View</a>
+                            <div class="flex p-1">
+                                <img class="h-full w-6 p-auto mr-2" src="/images/file.svg" alt="">
+                                <div class="flex justify-between items-center w-full">
+                                    <p class="flex-1">{{ $post->title }}</p>
+                                    <a class="text-blue-600" href='/posts/{{ $post->id }}'>View</a>
+                                </div>
                             </div>
-                        </div>
-                    @endforeach
+                        @endforeach
 
                     </div>
                 </div>
             </div>
+            <h2 class="text-xl font-semibold p-4 ">Comments</h1>
+                @foreach ($user->comments as $comment)
+                    <div class="p-4 m-3  outline outline-1 rounded outline-slate-200 text-sm">
+                        {{ $comment->body }}
+                    </div>
+                @endforeach
+
         </div>
     </div>
 </body>

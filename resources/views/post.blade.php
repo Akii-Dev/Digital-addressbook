@@ -16,7 +16,8 @@
             <h1 class="text-2xl font-bold mb-8">{{ $post->title }}</h1>
             <div class="flex">
                 @foreach ($post->tags as $tag)
-                <p class="m-1 text-white rounded-full px-2 pb-1" style="background-color: {{$tag->color}}">{{$tag->name}}</p>
+                    <p class="m-1 text-white rounded-full px-2 pb-1" style="background-color: {{ $tag->color }}">
+                        {{ $tag->name }}</p>
                 @endforeach
             </div>
             <div class="flex">
@@ -29,7 +30,14 @@
             <div class="mt-8">
                 {!! nl2br(e($post->body)) !!}
             </div>
+            <h2 class="text-xl font-semibold p-4 ">Comments</h1>
+                @foreach ($post->comments as $comment)
+                    <div class="p-4 m-3  outline outline-1 rounded outline-slate-200 text-sm">
+                        {{ $comment->body }}
+                    </div>
+                @endforeach
         </div>
+
     </div>
 </body>
 
