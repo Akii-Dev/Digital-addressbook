@@ -15,7 +15,7 @@ class PostSeeder extends Seeder
     {
         $users = User::all();
         foreach ($users as $user) {
-            Post::factory(3)->hasTags(3)->create(
+            Post::factory(3)->hasComments(3)->hasTags(3)->create(
                 [
                     "user_id" => $user->id,
                 ]

@@ -14,6 +14,7 @@ class UserSeeder extends Seeder
     {
         User::factory(5)
                 ->hasProfile()
+                ->hasComments(3)
                 ->create();
     }
 }
