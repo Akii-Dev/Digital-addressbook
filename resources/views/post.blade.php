@@ -16,7 +16,7 @@
             <h1 class="text-2xl font-bold mb-8">{{ $post->title }}</h1>
             <div class="flex">
                 @foreach ($post->tags as $tag)
-                <p class=' m-1 bg-[{{$tag->color}}]'>{{$tag->name}}</p>
+                <p class="m-1 text-white rounded-full px-2 pb-1" style="background-color: {{$tag->color}}">{{$tag->name}}</p>
                 @endforeach
             </div>
             <div class="flex">
