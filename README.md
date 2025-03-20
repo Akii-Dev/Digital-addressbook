@@ -35,6 +35,6 @@ $ php artisan serve
 ```
 
 ## Images
-![alt text](public\images\users.png)
-![alt text](public\images\userinfo.png)
-![alt text](public\images\postinfo.png)
+![users](https://github.com/Akii-Dev/Digital-addressbook/blob/main/public/images/users.png?raw=true)
+![user info](https://github.com/Akii-Dev/Digital-addressbook/blob/main/public/images/userinfo.png?raw=true)
+![post info](https://github.com/Akii-Dev/Digital-addressbook/blob/main/public/images/postinfo.png?raw=true)
