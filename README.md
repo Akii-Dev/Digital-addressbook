@@ -25,11 +25,11 @@ $ composer install
 ```
 $ php artisan migrate:refresh --seed
 ```
-6. Generate Tailwindcss:
+5. Generate Tailwindcss:
 ```
 $ npm run dev
 ```
-7. Run project:
+6. Run project:
 ```
 $ php artisan serve
 ```
