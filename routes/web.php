@@ -9,6 +9,11 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get(
+    '/',
+    [UserController::class, 'index']
+)->name('profiles.index');
+
+Route::get(
     '/users',
     [UserController::class, 'index']
 )->name('profiles.index');
