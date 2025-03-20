@@ -12,6 +12,8 @@ XAMPP (or another SQL admin tool)
 
 Composer
 
+NodeJS
+
 # Installation
 1. Clone the repository
 2. Install composer in the root:
